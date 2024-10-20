@@ -1,19 +1,15 @@
 import pygame
 import sys
 
-# Inicialize o Pygame
 pygame.init()
 
-# Defina as constantes
 WIDTH, HEIGHT = 640, 480
 FPS = 60
 
-# Defina as cores
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)
 
-# Defina a classe do pássaro
 class Bird:
     def __init__(self):
         self.x = WIDTH / 2
@@ -28,7 +24,6 @@ class Bird:
     def flap(self):
         self.velocidade = -10
 
-# Defina a classe do cano
 class Cano:
     def __init__(self):
         self.x = WIDTH
@@ -40,7 +35,6 @@ class Cano:
     def update(self):
         self.x += self.velocidade
 
-# Defina a classe do jogo
 class Jogo:
     def __init__(self):
         self.bird = Bird()
@@ -110,7 +104,6 @@ class Jogo:
                 if event.key == pygame.K_SPACE:
                     self.bird.flap()
 
-# Inicialize o jogo
 jogo = Jogo()
 clock = pygame.time.Clock()
 
